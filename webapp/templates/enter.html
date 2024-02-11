@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Glowing Inputs Login Form UI</title>
+      <link rel="stylesheet" href="{% static 'css/logcss.css'%}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css">
+   </head>
+   <body>
+      <div class="login-form">
+         <div class="text">
+            REGISTER
+         </div>
+         <form method="post">
+          {% csrf_token %}
+            <div class="field">
+               <div><i class="fas fa-solid fa-user-plus"></i></div>
+               <input type="text" placeholder="Enter your name" name="{{frm.name.name}}">
+            </div>
+            <div class="field">
+               <div><i class="fas fa-solid fa-envelope"></i></div>
+               <input type="text" placeholder="Enter your email" name="{{frm.email.name}}">
+            </div>
+            <div class="field">
+               <div><i class="fas fa-solid fa-lock"></i></div>
+               <input type="password" placeholder="Enter your password" name="{{frm.password.name}}">
+            </div>
+            <div class="field">
+               <div><i class="fas fa-solid fa-phone"></i></div>
+               <input type="text" placeholder="Enter contact" name="{{frm.contact.name}}">
+            </div>
+            <button type="submit" value="register" name="register">Register</button>
+         </form>
+      </div>
+   </body>
+</html>
